@@ -36,7 +36,7 @@
   "homepage": "https://github.com/TheDevs-Network/kutt#readme",
   "dependencies": {
     "@sentry/apm": "^5.21.1",
-    "@sentry/node": "^5.21.1",
+    "@sentry/node": "^5.30.0",
     "@sentry/react": "^5.21.1",
     "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
