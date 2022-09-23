@@ -14,7 +14,9 @@
     "migrate:make": "knex migrate:make --env production",
     "lint": "eslint server/ --ext .js,.ts --fix",
     "lint:nofix": "eslint server/ --ext .js,.ts",
-    "docs:build": "cd docs/api && tsc generate.ts --resolveJsonModule && node generate && cd ../.."
+    "docs:build": "cd docs/api && tsc generate.ts --resolveJsonModule && node generate && cd ../..",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -39,8 +41,8 @@
     "@sentry/node": "^5.21.1",
     "@sentry/react": "^5.21.1",
     "app-root-path": "^3.0.0",
-    "axios": "^0.21.1",
-    "babel-plugin-inline-react-svg": "^1.1.0",
+    "axios": "^0.21.3",
+    "babel-plugin-inline-react-svg": "^2.0.0",
     "bcryptjs": "^2.4.3",
     "bull": "^3.12.1",
     "cookie-parser": "^1.4.4",
@@ -48,12 +50,12 @@
     "cross-env": "^7.0.3",
     "date-fns": "^2.9.0",
     "dotenv": "^8.2.0",
-    "easy-peasy": "^5.0.3",
+    "easy-peasy": "^5.0.4",
     "email-validator": "^1.2.3",
-    "envalid": "^6.0.0",
+    "envalid": "^6.0.2",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
-    "express-validator": "^6.3.1",
+    "express-validator": "^6.5.0",
     "geoip-lite": "^1.4.0",
     "helmet": "^3.21.2",
     "isbot": "^2.5.4",
@@ -65,11 +67,11 @@
     "ms": "^2.1.2",
     "nanoid": "^1.3.4",
     "neo4j-driver": "^1.7.6",
-    "next": "^9.4.4",
+    "next": "^12.0.2",
     "node-cron": "^2.0.3",
-    "nodemailer": "^6.4.2",
+    "nodemailer": "^6.6.1",
     "p-queue": "^6.2.1",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-localapikey-update": "^0.6.0",
@@ -86,7 +88,7 @@
     "react-tippy": "^1.3.1",
     "react-tooltip": "^3.11.2",
     "react-use-form-state": "^0.12.1",
-    "recharts": "^1.8.5",
+    "recharts": "^2.1.3",
     "redis": "^3.1.1",
     "reflexbox": "^4.0.6",
     "signale": "^1.4.0",
@@ -97,7 +99,8 @@
     "use-media": "^1.4.0",
     "useragent": "^2.2.1",
     "uuid": "^3.4.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -168,5 +171,6 @@
     "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.2"
-  }
+  },
+  "snyk": true
 }
